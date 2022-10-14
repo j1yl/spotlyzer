@@ -1,1 +1,1 @@
-# one-page-site-template
+# Spotlyzer

@@ -1,0 +1,107 @@
+@import "vars.scss";
+
+body {
+  background-color: $dark;
+}
+
+[class ^= "box-"] {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.page-container {
+  height: 90vh;
+  width: 90%;
+  margin: 20px auto;
+
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: repeat(12, 1fr);
+
+  grid-template-areas: 
+  "h h h h  h h h h  h h h h"
+  "m m m m  m m m m  m m m m"
+  "a a a a  a a a a  a a a a"
+  "s s s s  s s s s  s s s s"
+  "g g g g  g g g g  g g g g"
+  "f f f f  f f f f  f f f f";
+}
+
+.page-container .box-1 {
+  grid-area: h;
+}
+.page-container .box-2 {
+  grid-area: m;
+}
+.page-container .box-3 {
+  grid-area: a;
+  border-radius: 1rem;
+  background-color: $light;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.page-container .box-4 {
+  grid-area: s;
+  border-radius: 1rem;
+  background-color: $light;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.page-container .box-5 {
+  grid-area: g;
+  border-radius: 1rem;
+  background-color: $secondary;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.page-container .box-6 {
+  grid-area: f;
+}
+
+// tablet
+@media (min-width: 768px) {
+
+  .page-container {
+    height: 90vh;
+    width: 90%;
+    margin: 20px auto;
+  
+    display: grid;
+    gap: 10px;
+  
+    grid-template-columns: repeat(12, 1fr);
+  
+    grid-template-areas: 
+    "h h h h  h h h h  h h h h"
+    "m m m m  m m m m  m m m m"
+    "m m m m  m m m m  m m m m"
+    "a a a a  a g g g  g g g g"
+    "s s s s  s g g g  g g g g"
+    "f f f f  f f f f  f f f f";
+  }
+
+}
+
+// pc
+@media (min-width: 1080px) {
+
+  .page-container {
+    height: 90vh;
+    width: 90%;
+    margin: 20px auto;
+  
+    display: grid;
+    gap: 10px;
+  
+    grid-template-columns: repeat(12, 1fr);
+  
+    grid-template-areas: 
+    "h h h h  h h h h  h h h h"
+    "m m m m  m m m m  m m m m"
+    "a a a s  s s g g  g g g g"
+    "a a a s  s s g g  g g g g"
+    "a a a s  s s g g  g g g g"
+    "f f f f  f f f f  f f f f";
+  }
+
+}
