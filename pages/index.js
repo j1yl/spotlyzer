@@ -1,36 +1,36 @@
 import { useSession, signIn, signOut } from "next-auth/react";
-import { useState } from "react";
+import Hero from "../comps/Hero";
+import Artists from "../comps/Artists";
+import Tracks from "../comps/Tracks";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   const { data: session } = useSession();
-  const [artist, setArtist] = useState([]);
+  // const [artist, setArtist] = useState([]);
 
-  const getMyArtists = async () => {
-    const res = await fetch("/api/artists");
-    const { artists } = await res.json();
-    setArtist(artists);
-  };
+  // const getMyArtists = async () => {
+  //   const res = await fetch("/api/artists");
+  //   const { artists } = await res.json();
+  //   setArtist(artists);
+  // };
 
+  // {artist.map((item) => (
+  //   <div key={item.id}>
+  //     <p>{item.artist}</p>
+  //   </div>
+  // ))}
   if (session) {
     return (
       <>
-        Signed in as {session?.token?.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
-        <hr />
-        <button onClick={() => getMyArtists()}>Get my artists</button>
-        {artist.map((item) => (
-          <div key={item.id}>
-            <p>{item.artist}</p>
-          </div>
-        ))}
+        <Hero />
+        <Artists />
+        <Tracks />
       </>
     );
   }
   return (
     <>
-      Not signed in <br />
-      <button onClick={() => signIn()}>Sign In</button>
+      <Hero />
     </>
   );
 }
