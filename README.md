@@ -1,3 +1,41 @@
+# Spotlyzer
+
+## About
+
+Spotlyzer is a web application that displays a Spotify account's most played tracks, artists, and playlists in their library. Spotlyzer accesses this data through the Spotify API which requires OAuth2. This project does not access your Spotify password.
+
+Due to Spotify API's restrictions, hobbyist/school projects are not allowed quota's extensions, meaning that I can have a maximum of 25 regular users.
+
+## Techstack
+
+- JavaScript
+- SASS
+- React
+- NEXT
+- Spotify API
+
+## Setup Tokens
+
+```
+# Configure these tokens using env variables, found in Spotify Developer portal
+SPOTIFY_CLIENT_ID=<client_id>
+SPOTIFY_CLIENT_SECRET=<client_secret>
+```
+
+## Endpoints
+
+```
+# Top Tracks
+https://localhost:3000/api/tracks
+# Top Artists
+https://localhost:3000/api/artists
+# Playlists
+https://localhost:3000/api/playlists
+
+```
+
+<br/>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
