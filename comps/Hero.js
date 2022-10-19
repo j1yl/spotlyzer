@@ -13,6 +13,7 @@ const Hero = () => {
           </h1>
           <p>
             Welcome! You are logged in as: <span>{session?.token?.email}</span>
+            <br></br>Scroll down to view your data.
           </p>
         </div>
       </>
