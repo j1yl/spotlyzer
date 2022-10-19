@@ -23,8 +23,8 @@ const Artists = () => {
           <div key={item.id} className={styles.artist_card}>
             <Image
               src={item.image.url}
-              width={item.image.width / 3}
-              height={item.image.height / 3}
+              width={item.image.width / 4}
+              height={item.image.height / 4}
               className={styles.artist_card_image}
             />
             <p>
