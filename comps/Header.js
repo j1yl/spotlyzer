@@ -16,12 +16,14 @@ const Header = () => {
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="mailto: lefodev@gmail.com">Contact</Link>
-          </div>
-          <div className={styles.authentication}>
-            <button className={styles.login_btn} onClick={() => signOut()}>
-              Logout
-            </button>
-            <p className={styles.email}>{session?.token?.email}</p>
+            <div className={styles.authentication}>
+              <p className={styles.email}>
+                Logged in as {session?.token?.email}
+              </p>
+              <button className={styles.login_btn} onClick={() => signOut()}>
+                Logout
+              </button>
+            </div>
           </div>
         </nav>
       </>
@@ -36,11 +38,11 @@ const Header = () => {
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="mailto: lefodev@gmail.com">Contact</Link>
-        </div>
-        <div className={styles.authentication}>
-          <button className={styles.login_btn} onClick={() => signIn()}>
-            Login
-          </button>
+          <div className={styles.authentication}>
+            <button className={styles.login_btn} onClick={() => signIn()}>
+              Login
+            </button>
+          </div>
         </div>
       </nav>
     </>

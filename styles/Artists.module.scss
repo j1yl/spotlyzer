@@ -1,0 +1,9 @@
+.artists_container {
+  grid-area: a;
+  border: 1px solid black;
+
+  display: flex;
+  width: 90vw;
+  height: 100vh;
+  align-items: center;
+}

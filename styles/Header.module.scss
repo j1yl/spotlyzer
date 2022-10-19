@@ -1,0 +1,24 @@
+.header_container {
+  grid-area: h;
+  border: 1px solid black;
+
+  display: flex;
+  position: fixed;
+  width: 90%;
+  height: 10%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+.nav_links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.authentication {
+  display: flex;
+  gap: 1rem;
+}
