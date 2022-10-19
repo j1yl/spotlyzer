@@ -1,10 +1,23 @@
+@import "vars.scss";
+
 .artists_container {
   grid-area: a;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 90vw;
   height: 100vh;
-  align-items: center;
+
+  button {
+    padding: 5px 15px;
+    background: $secondary;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: $step-2;
+  }
+  button:hover {
+    scale: 0.95;
+    transition: 0.2s ease;
+  }
 }

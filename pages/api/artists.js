@@ -15,6 +15,7 @@ const handler = async (req, res) => {
     followers: artist.followers.total,
     url: artist.external_urls.spotify,
     id: artist.id,
+    image: artist.images[1],
   }));
 
   res.setHeader(
