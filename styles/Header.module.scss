@@ -1,3 +1,5 @@
+@import "vars.scss";
+
 .header_container {
   grid-area: h;
   border: 1px solid black;
@@ -10,15 +12,57 @@
   align-items: center;
   justify-content: space-between;
   z-index: 99;
+  
+  h2 {
+    font-size: $step-3;
+    color: $light;
+  }
+  span {
+    color: $primary;
+  }
 }
 
-.nav_links {
+.nav_links_container {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  justify-content: space-evenly;
+  width: 100%;
+
+  font-size: $step--1;
+  gap: 5px;
+
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: $secondary;
+    }
+  }
+
+  li:hover {
+    a {
+      color: $light;
+      transition: 0.3s ease;
+    }
+  }
 }
 
-.authentication {
+.authentication_container {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  button {
+    padding: 5px 15px;
+    font-size: $step--1;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background: $secondary;
+  }
+
+  button:hover {
+    scale: 0.95;
+    transition: 0.2s ease;
+  }
 }
