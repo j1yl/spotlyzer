@@ -8,7 +8,7 @@ const handler = async (req, res) => {
   const response = await getUsersTopTracks(accessToken);
   const { items } = await response.json();
 
-  const tracks = items.slice(0, 15).map((track) => ({
+  const tracks = items.slice(0, 20).map((track) => ({
     title: track.name,
     artist: track.artists.map((_artist) => _artist.name).join(", "),
     url: track.external_urls.spotify,
