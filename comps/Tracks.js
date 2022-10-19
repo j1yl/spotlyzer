@@ -1,23 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Tracks.module.scss";
 
 const Tracks = () => {
   const [tracksList, setTracksList] = useState([]);
 
-  const getMyTracks = async () => {
-    const res = await fetch("/api/tracks");
-    const { tracks } = await res.json();
-    setTracksList(tracks);
-  };
+  useEffect(() => {
+    const getMyTracks = async () => {
+      const res = await fetch("/api/tracks");
+      const { tracks } = await res.json();
+      setTracksList(tracks);
+    };
+
+    getMyTracks();
+  });
 
   return (
     <div className={styles.tracks_container}>
-      <button onClick={() => getMyTracks()}>Get my top tracks</button>
+      <h2>Your Top Tracks From The Last 4 Months</h2>
       <div className={styles.tracks}>
-        {tracksList.map((item) => (
+        {tracksList.map((item, index) => (
           <div key={item.id}>
             <p>
-              {item.title} by {item.artist}
+              {index + 1}. <span>{item.title}</span> - {item.artist}
             </p>
           </div>
         ))}

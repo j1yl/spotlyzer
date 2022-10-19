@@ -14,6 +14,11 @@ Due to Spotify API's restrictions, hobbyist/school projects are not allowed quot
 - NEXT
 - Spotify API
 
+## Screenshots
+
+![Mobile View Image](https://i.imgur.com/C1rkJzB.png)
+![Destkop View Image](https://i.imgur.com/kTHrQ9J.png)
+
 ## Setup Tokens
 
 ```
