@@ -1,0 +1,28 @@
+@import "vars.scss";
+
+.about_container {
+  height: 100vh;
+  width: 90vw;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .intro_container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h1 {
+      color: $primary;
+      font-size: $step-2;
+    }
+
+    p {
+      color: $light;
+      font-size: $step-1;
+    }
+  }
+}
