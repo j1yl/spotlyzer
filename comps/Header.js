@@ -13,18 +13,26 @@ const Header = () => {
             Spot<span>lyzer</span>
           </h2>
           <div className={styles.nav_links_container}>
-            <Link href="/" className={styles.nav_links}>
-              Home
-            </Link>
-            <Link href="/about" className={styles.nav_links}>
-              About
-            </Link>
-            <Link href="mailto: lefodev@gmail.com" className={styles.nav_links}>
-              Contact
-            </Link>
+            <li>
+              <Link href="/" className={styles.nav_links}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className={styles.nav_links}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="mailto: lefodev@gmail.com"
+                className={styles.nav_links}
+              >
+                Contact
+              </Link>
+            </li>
           </div>
           <div className={styles.authentication_container}>
-            {/* <p className={styles.email}>Logged in as {session?.token?.email}</p> */}
             <button className={styles.login_btn} onClick={() => signOut()}>
               Logout
             </button>
