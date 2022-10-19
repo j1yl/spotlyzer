@@ -28,8 +28,11 @@ const Artists = () => {
               className={styles.artist_card_image}
             />
             <p>
-              Name: {item.artist}
-              <br></br>Followers: {item.followers}
+              <span>Name: </span>
+              {item.artist}
+              <br></br>
+              <span>Followers: </span>
+              {item.followers}
             </p>
           </div>
         ))}

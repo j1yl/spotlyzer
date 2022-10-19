@@ -19,6 +19,11 @@
     max-height: 100%;
     border-radius: 10rem;
   }
+
+  h2 {
+    color: $dark;
+    font-size: $step-2;
+  }
 }
 
 .artists {
@@ -34,5 +39,12 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+
+    p {
+      font-size: $step-0;
+      span {
+        font-weight: 600;
+      }
+    }
   }
 }
